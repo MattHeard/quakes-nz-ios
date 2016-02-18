@@ -12,6 +12,9 @@
 		344630661C76754700DAE5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344630641C76754700DAE5E1 /* Main.storyboard */; };
 		344630681C76754700DAE5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344630671C76754700DAE5E1 /* Assets.xcassets */; };
 		3446306B1C76754700DAE5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344630691C76754700DAE5E1 /* LaunchScreen.storyboard */; };
+		344630731C767B8200DAE5E1 /* EarthquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630721C767B8200DAE5E1 /* EarthquakeTableViewCell.swift */; };
+		344630751C76822300DAE5E1 /* EarthquakeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630741C76822300DAE5E1 /* EarthquakeTableViewController.swift */; };
+		344630771C76825700DAE5E1 /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630761C76825700DAE5E1 /* Earthquake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		344630671C76754700DAE5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3446306A1C76754700DAE5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3446306C1C76754700DAE5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		344630721C767B8200DAE5E1 /* EarthquakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeTableViewCell.swift; sourceTree = "<group>"; };
+		344630741C76822300DAE5E1 /* EarthquakeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeTableViewController.swift; sourceTree = "<group>"; };
+		344630761C76825700DAE5E1 /* Earthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 				344630601C76754700DAE5E1 /* AppDelegate.swift */,
 				344630621C76754700DAE5E1 /* ViewController.swift */,
 				344630641C76754700DAE5E1 /* Main.storyboard */,
+				344630741C76822300DAE5E1 /* EarthquakeTableViewController.swift */,
+				344630761C76825700DAE5E1 /* Earthquake.swift */,
+				344630721C767B8200DAE5E1 /* EarthquakeTableViewCell.swift */,
 				344630671C76754700DAE5E1 /* Assets.xcassets */,
 				344630691C76754700DAE5E1 /* LaunchScreen.storyboard */,
 				3446306C1C76754700DAE5E1 /* Info.plist */,
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344630771C76825700DAE5E1 /* Earthquake.swift in Sources */,
+				344630751C76822300DAE5E1 /* EarthquakeTableViewController.swift in Sources */,
 				344630631C76754700DAE5E1 /* ViewController.swift in Sources */,
 				344630611C76754700DAE5E1 /* AppDelegate.swift in Sources */,
+				344630731C767B8200DAE5E1 /* EarthquakeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
