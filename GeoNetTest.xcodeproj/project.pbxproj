@@ -15,6 +15,8 @@
 		344630731C767B8200DAE5E1 /* EarthquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630721C767B8200DAE5E1 /* EarthquakeTableViewCell.swift */; };
 		344630751C76822300DAE5E1 /* EarthquakeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630741C76822300DAE5E1 /* EarthquakeTableViewController.swift */; };
 		344630771C76825700DAE5E1 /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630761C76825700DAE5E1 /* Earthquake.swift */; };
+		3446307A1C76A63100DAE5E1 /* QuakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344630781C76A63100DAE5E1 /* QuakeView.swift */; };
+		3446307B1C76A63100DAE5E1 /* QuakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344630791C76A63100DAE5E1 /* QuakeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		344630721C767B8200DAE5E1 /* EarthquakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeTableViewCell.swift; sourceTree = "<group>"; };
 		344630741C76822300DAE5E1 /* EarthquakeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeTableViewController.swift; sourceTree = "<group>"; };
 		344630761C76825700DAE5E1 /* Earthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
+		344630781C76A63100DAE5E1 /* QuakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeView.swift; sourceTree = "<group>"; };
+		344630791C76A63100DAE5E1 /* QuakeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuakeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		3446305F1C76754700DAE5E1 /* GeoNetTest */ = {
 			isa = PBXGroup;
 			children = (
+				344630781C76A63100DAE5E1 /* QuakeView.swift */,
+				344630791C76A63100DAE5E1 /* QuakeView.xib */,
 				344630601C76754700DAE5E1 /* AppDelegate.swift */,
 				344630621C76754700DAE5E1 /* ViewController.swift */,
 				344630641C76754700DAE5E1 /* Main.storyboard */,
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3446307B1C76A63100DAE5E1 /* QuakeView.xib in Resources */,
 				3446306B1C76754700DAE5E1 /* LaunchScreen.storyboard in Resources */,
 				344630681C76754700DAE5E1 /* Assets.xcassets in Resources */,
 				344630661C76754700DAE5E1 /* Main.storyboard in Resources */,
@@ -146,6 +153,7 @@
 			files = (
 				344630771C76825700DAE5E1 /* Earthquake.swift in Sources */,
 				344630751C76822300DAE5E1 /* EarthquakeTableViewController.swift in Sources */,
+				3446307A1C76A63100DAE5E1 /* QuakeView.swift in Sources */,
 				344630631C76754700DAE5E1 /* ViewController.swift in Sources */,
 				344630611C76754700DAE5E1 /* AppDelegate.swift in Sources */,
 				344630731C767B8200DAE5E1 /* EarthquakeTableViewCell.swift in Sources */,
@@ -298,6 +306,7 @@
 				344630711C76754700DAE5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
