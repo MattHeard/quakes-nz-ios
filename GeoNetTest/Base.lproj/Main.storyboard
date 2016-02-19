@@ -89,6 +89,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="sIb-jz-orO"/>
+                    <connections>
+                        <outlet property="mapView" destination="7Oy-0A-W7s" id="fsd-NK-h62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zTo-8U-wCB" id="ajl-mT-5e2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBG-dr-QpR">

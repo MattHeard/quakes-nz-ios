@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var earthquake = Earthquake?()
@@ -22,8 +23,8 @@ class ViewController: UIViewController {
     }
     
     func centerMapOnEarthquake(earthquake: Earthquake) {
-        let regionRadius: CLLocationDistance = 1000000 // 1000 km
-        let region = MKCoordinateRegionMakeWithDistance(earthquake.location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
-        mapView.setRegion(region, animated: false)
+//        let regionRadius: CLLocationDistance = 1000000 // 1000 km
+//        let region = MKCoordinateRegionMakeWithDistance(earthquake.location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setCenterCoordinate(earthquake.location.coordinate, animated: true)
     }
 }
