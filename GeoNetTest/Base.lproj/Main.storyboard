@@ -169,10 +169,10 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="depthLabel" destination="sFA-5Z-bVO" id="LyQ-r2-739"/>
+                                    <outlet property="intensityLabel" destination="8Zz-V1-DMd" id="Gf8-oo-eKE"/>
                                     <outlet property="locationLabel" destination="4Hb-Sz-Abl" id="kFg-3b-SvQ"/>
                                     <outlet property="magnitudeBigLabel" destination="oLw-J6-W3D" id="hW5-kg-pL0"/>
                                     <outlet property="magnitudeSmallLabel" destination="Fc8-ZB-BV3" id="gTV-rv-6L9"/>
-                                    <outlet property="strengthLabel" destination="8Zz-V1-DMd" id="zyS-Yl-5tp"/>
                                     <outlet property="timestampLabel" destination="Wwv-Y3-rhd" id="iIo-1z-PbH"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowEarthquake" id="WY1-xP-eZE"/>
                                 </connections>

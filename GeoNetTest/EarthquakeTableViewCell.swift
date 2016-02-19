@@ -13,7 +13,7 @@ class EarthquakeTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var magnitudeBigLabel: UILabel!
     @IBOutlet weak var magnitudeSmallLabel: UILabel!
-    @IBOutlet weak var strengthLabel: UILabel!
+    @IBOutlet weak var intensityLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var depthLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!

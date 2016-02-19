@@ -14,12 +14,14 @@ class Earthquake {
     var location: String // TODO: Change to MapKit location
     var timestamp: String // TODO: Change to iOS datetime
     var depth: Int
+    var intensity: String
     
     // MARK: Initialization
-    init(magnitude: Double, location: String, timestamp: String, depth: Int) {
+    init(magnitude: Double, location: String, timestamp: String, depth: Int, intensity: String) {
         self.magnitude = magnitude
         self.location = location
         self.timestamp = timestamp
         self.depth = depth
+        self.intensity = intensity
     }
 }
