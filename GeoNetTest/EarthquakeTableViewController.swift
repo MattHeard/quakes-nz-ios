@@ -51,17 +51,26 @@ class EarthquakeTableViewController: UITableViewController {
         
         let earthquake = earthquakes[indexPath.row]
         
-        let magnitudeBig = Int(round(earthquake.magnitude))
-        cell.magnitudeBigLabel.text = String(magnitudeBig)
+        cell.magnitudeBigLabel.text = magnitudeBigLabelText(earthquake.magnitude)
         
         cell.magnitudeSmallLabel.text = magnitudeSmallLabelText(earthquake.magnitude)
-        
         cell.locationLabel.text = locationLabelText(earthquake.location)
         cell.timestampLabel.text = earthquake.timestamp
         cell.depthLabel.text = "Depth: \(earthquake.depth) km"
         cell.intensityLabel.text = earthquake.intensity
         
         return cell
+    }
+    
+    func magnitudeBigLabelText(magnitude: Double) -> String {
+        return String(Int(magnitude))
+    }
+    
+    func magnitudeSmallLabelText(magnitude: Double) -> String {
+        let smallPart = round(magnitude * 10) / 10.0 - round(magnitude)
+        let text = String(smallPart)
+        let startIndex = text.startIndex.advancedBy(1)
+        return text.substringFromIndex(startIndex)
     }
     
     func locationLabelText(location: CLLocation) -> String {
@@ -73,13 +82,6 @@ class EarthquakeTableViewController: UITableViewController {
     
     func distanceBetween(location: CLLocation, nearestCity: CLLocation) -> Int {
         return Int(location.distanceFromLocation(nearestCity) / 1000)
-    }
-
-    func magnitudeSmallLabelText(magnitude: Double) -> String {
-        let smallPart = round(magnitude * 10) / 10.0 - round(magnitude)
-        let text = String(smallPart)
-        let startIndex = text.startIndex.advancedBy(1)
-        return text.substringFromIndex(startIndex)
     }
 
     /*
