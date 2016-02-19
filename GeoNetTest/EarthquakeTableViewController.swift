@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class EarthquakeTableViewController: UITableViewController {
     // MARK: Properties
@@ -18,10 +19,14 @@ class EarthquakeTableViewController: UITableViewController {
         loadSampleEarthquakes()
     }
     
+    let Wellington = CLLocation(latitude: 41.3, longitude: 174.8)
+    let Auckland = CLLocation(latitude: 36.8, longitude: 174.7)
+    let Christchurch = CLLocation(latitude: 43.5, longitude: 172.6)
+    
     func loadSampleEarthquakes() {
-        let earthquake1 = Earthquake(magnitude: 3.206508, location: "30 km away from Wellington", timestamp: "15 minutes ago", depth: 10, intensity: "weak")
-        let earthquake2 = Earthquake(magnitude: 2.2322786, location: "20 km away from Christchurch", timestamp: "1 hour ago", depth: 20, intensity: "strong")
-        let earthquake3 = Earthquake(magnitude: 2.268272, location: "15 km away from Auckland", timestamp: "2 hours ago", depth: 5, intensity: "light")
+        let earthquake1 = Earthquake(magnitude: 3.206508, location: Wellington, timestamp: "15 minutes ago", depth: 10, intensity: "weak")
+        let earthquake2 = Earthquake(magnitude: 2.2322786, location: Auckland, timestamp: "1 hour ago", depth: 20, intensity: "strong")
+        let earthquake3 = Earthquake(magnitude: 2.268272, location: Christchurch, timestamp: "2 hours ago", depth: 5, intensity: "light")
         earthquakes += [earthquake1, earthquake2, earthquake3]
     }
 
@@ -51,7 +56,7 @@ class EarthquakeTableViewController: UITableViewController {
         
         cell.magnitudeSmallLabel.text = magnitudeSmallLabelText(earthquake.magnitude)
         
-        cell.locationLabel.text = earthquake.location
+        cell.locationLabel.text = locationLabelText(earthquake.location)
         cell.timestampLabel.text = earthquake.timestamp
         cell.depthLabel.text = "Depth: \(earthquake.depth) km"
         cell.intensityLabel.text = earthquake.intensity
@@ -59,6 +64,17 @@ class EarthquakeTableViewController: UITableViewController {
         return cell
     }
     
+    func locationLabelText(location: CLLocation) -> String {
+        let nearestCityName = "Wellington"
+        let nearestCity = Wellington
+        let distance = distanceBetween(location, nearestCity: nearestCity)
+        return "\(distance) km away from \(nearestCityName)"
+    }
+    
+    func distanceBetween(location: CLLocation, nearestCity: CLLocation) -> Int {
+        return Int(location.distanceFromLocation(nearestCity) / 1000)
+    }
+
     func magnitudeSmallLabelText(magnitude: Double) -> String {
         let smallPart = round(magnitude * 10) / 10.0 - round(magnitude)
         let text = String(smallPart)

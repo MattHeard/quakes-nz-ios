@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class Earthquake {
     // MARK: Properties
     var magnitude: Double
-    var location: String // TODO: Change to MapKit location
+    var location: CLLocation
     var timestamp: String // TODO: Change to iOS datetime
     var depth: Int
     var intensity: String
     
     // MARK: Initialization
-    init(magnitude: Double, location: String, timestamp: String, depth: Int, intensity: String) {
+    init(magnitude: Double, location: CLLocation, timestamp: String, depth: Int, intensity: String) {
         self.magnitude = magnitude
         self.location = location
         self.timestamp = timestamp
