@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Earthquake-->
@@ -41,45 +42,93 @@
             </objects>
             <point key="canvasLocation" x="2731" y="415"/>
         </scene>
-        <!--Earthquake Table View Controller-->
+        <!--Recent Earthquakes-->
         <scene sceneID="nwV-Vf-zw7">
             <objects>
                 <tableViewController id="I6L-cw-txk" customClass="EarthquakeTableViewController" customModule="GeoNetTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="hS1-Or-V74">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="hS1-Or-V74">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EarthquakeTableViewCell" rowHeight="66" id="zTo-8U-wCB" customClass="EarthquakeTableViewCell" customModule="GeoNetTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="66"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EarthquakeTableViewCell" rowHeight="85" id="zTo-8U-wCB" customClass="EarthquakeTableViewCell" customModule="GeoNetTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zTo-8U-wCB" id="ajl-mT-5e2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLw-J6-W3D">
-                                            <rect key="frame" x="8" y="8" width="75" height="50"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLw-J6-W3D">
+                                            <rect key="frame" x="8" y="8" width="57" height="68"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="72"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30km North of Wellington" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-Sz-Abl">
-                                            <rect key="frame" x="91" y="8" width="501" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15 minutes ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-Y3-rhd">
+                                            <rect key="frame" x="476" y="8" width="116" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="116" id="6aS-Nn-UDy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-Y3-rhd">
-                                            <rect key="frame" x="91" y="37" width="501" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-ZB-BV3">
+                                            <rect key="frame" x="50" y="8" width="21" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="21" id="G4b-qm-m3v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="B9t-JI-3Rb">
+                                            <rect key="frame" x="79" y="8" width="191" height="68"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="strong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-V1-DMd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 km away from Wellington" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-Sz-Abl">
+                                                    <rect key="frame" x="0.0" y="29" width="191" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depth: 10 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFA-5Z-bVO">
+                                                    <rect key="frame" x="0.0" y="53" width="74" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="2Mg-qR-ECa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="B9t-JI-3Rb" firstAttribute="top" secondItem="Fc8-ZB-BV3" secondAttribute="top" id="DtM-dH-vFf"/>
+                                        <constraint firstItem="oLw-J6-W3D" firstAttribute="leading" secondItem="ajl-mT-5e2" secondAttribute="leadingMargin" id="EVG-ZS-T5n"/>
+                                        <constraint firstItem="oLw-J6-W3D" firstAttribute="centerY" secondItem="ajl-mT-5e2" secondAttribute="centerY" id="IwT-dJ-L4T"/>
+                                        <constraint firstItem="Fc8-ZB-BV3" firstAttribute="leading" secondItem="ajl-mT-5e2" secondAttribute="leadingMargin" constant="42" id="SDr-v4-gnn"/>
+                                        <constraint firstItem="B9t-JI-3Rb" firstAttribute="leading" secondItem="oLw-J6-W3D" secondAttribute="trailing" constant="14" id="Y6E-Mf-DE1"/>
+                                        <constraint firstItem="oLw-J6-W3D" firstAttribute="top" secondItem="Fc8-ZB-BV3" secondAttribute="top" id="bxl-vO-uL2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wwv-Y3-rhd" secondAttribute="bottom" constant="50.5" id="eKL-iD-nzk"/>
+                                        <constraint firstItem="B9t-JI-3Rb" firstAttribute="top" secondItem="Wwv-Y3-rhd" secondAttribute="top" id="hNH-9S-WmC"/>
+                                        <constraint firstItem="B9t-JI-3Rb" firstAttribute="leading" secondItem="Fc8-ZB-BV3" secondAttribute="trailing" constant="8" symbolic="YES" id="hxQ-Kd-tgy"/>
+                                        <constraint firstItem="Fc8-ZB-BV3" firstAttribute="top" secondItem="ajl-mT-5e2" secondAttribute="topMargin" id="iZ0-uG-tmb"/>
+                                        <constraint firstItem="Wwv-Y3-rhd" firstAttribute="trailing" secondItem="ajl-mT-5e2" secondAttribute="trailingMargin" id="jja-6C-kpR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="depthLabel" destination="sFA-5Z-bVO" id="LyQ-r2-739"/>
                                     <outlet property="locationLabel" destination="4Hb-Sz-Abl" id="kFg-3b-SvQ"/>
-                                    <outlet property="magnitudeLabel" destination="oLw-J6-W3D" id="s65-X4-rFf"/>
+                                    <outlet property="magnitudeBigLabel" destination="oLw-J6-W3D" id="hW5-kg-pL0"/>
+                                    <outlet property="magnitudeSmallLabel" destination="Fc8-ZB-BV3" id="gTV-rv-6L9"/>
+                                    <outlet property="strengthLabel" destination="8Zz-V1-DMd" id="zyS-Yl-5tp"/>
                                     <outlet property="timestampLabel" destination="Wwv-Y3-rhd" id="iIo-1z-PbH"/>
                                 </connections>
                             </tableViewCell>
@@ -89,7 +138,7 @@
                             <outlet property="delegate" destination="I6L-cw-txk" id="4Ue-In-dPd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="td9-po-4jh"/>
+                    <navigationItem key="navigationItem" title="Recent Earthquakes" id="td9-po-4jh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuF-I5-x2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

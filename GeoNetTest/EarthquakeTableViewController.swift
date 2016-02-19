@@ -19,9 +19,9 @@ class EarthquakeTableViewController: UITableViewController {
     }
     
     func loadSampleEarthquakes() {
-        let earthquake1 = Earthquake(magnitude: 5, location: "30km North of Wellington", timestamp: "15 minutes ago")
-        let earthquake2 = Earthquake(magnitude: 4, location: "20km West of Christchurch", timestamp: "1 hour ago")
-        let earthquake3 = Earthquake(magnitude: 3, location: "15km South of Auckland", timestamp: "2 hours ago")
+        let earthquake1 = Earthquake(magnitude: "5.0", location: "30 km away from Wellington", timestamp: "15 minutes ago", depth: 10)
+        let earthquake2 = Earthquake(magnitude: "4.1", location: "20 km away from Christchurch", timestamp: "1 hour ago", depth: 20)
+        let earthquake3 = Earthquake(magnitude: "3.2", location: "15 km away from Auckland", timestamp: "2 hours ago", depth: 5)
         earthquakes += [earthquake1, earthquake2, earthquake3]
     }
 
@@ -46,9 +46,14 @@ class EarthquakeTableViewController: UITableViewController {
         
         let earthquake = earthquakes[indexPath.row]
         
-        cell.magnitudeLabel.text = String(earthquake.magnitude)
+        cell.magnitudeBigLabel.text = String(earthquake.magnitude[earthquake.magnitude.startIndex])
+        
+        let magnitudeSmallLabelRange = earthquake.magnitude.startIndex.advancedBy(1)..<earthquake.magnitude.endIndex
+        cell.magnitudeSmallLabel.text = earthquake.magnitude[magnitudeSmallLabelRange]
+        
         cell.locationLabel.text = earthquake.location
         cell.timestampLabel.text = earthquake.timestamp
+        cell.depthLabel.text = "Depth: \(earthquake.depth) km"
         
         return cell
     }
