@@ -12,8 +12,18 @@ import MapKit
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
+    var earthquake = Earthquake?()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let earthquake = earthquake {
+            centerMapOnEarthquake(earthquake)
+        }
+    }
+    
+    func centerMapOnEarthquake(earthquake: Earthquake) {
+        let regionRadius: CLLocationDistance = 1000000 // 1000 km
+        let region = MKCoordinateRegionMakeWithDistance(earthquake.location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(region, animated: false)
     }
 }

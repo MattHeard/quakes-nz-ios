@@ -119,14 +119,17 @@ class EarthquakeTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowEarthquake" {
+            let earthquakeViewController = segue.destinationViewController as! ViewController
+            if let selectedEarthquakeCell = sender as? EarthquakeTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedEarthquakeCell)!
+                let selectedEarthquake = earthquakes[indexPath.row]
+                earthquakeViewController.earthquake = selectedEarthquake
+            }
+        }
     }
-    */
-
 }
