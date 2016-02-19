@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Earthquake-->
+        <!--Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoNetTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,16 +33,16 @@
                             <constraint firstItem="h3u-3b-t6S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x3X-pz-v10"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Earthquake" id="sIb-jz-orO"/>
+                    <navigationItem key="navigationItem" title="Details" id="sIb-jz-orO"/>
                     <connections>
                         <outlet property="mapView" destination="h3u-3b-t6S" id="oiS-E0-Sup"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2731" y="415"/>
+            <point key="canvasLocation" x="2715" y="415"/>
         </scene>
-        <!--Recent Earthquakes-->
+        <!--Quakes NZ-->
         <scene sceneID="nwV-Vf-zw7">
             <objects>
                 <tableViewController id="I6L-cw-txk" customClass="EarthquakeTableViewController" customModule="GeoNetTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,6 +130,7 @@
                                     <outlet property="magnitudeSmallLabel" destination="Fc8-ZB-BV3" id="gTV-rv-6L9"/>
                                     <outlet property="strengthLabel" destination="8Zz-V1-DMd" id="zyS-Yl-5tp"/>
                                     <outlet property="timestampLabel" destination="Wwv-Y3-rhd" id="iIo-1z-PbH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowEarthquake" id="WY1-xP-eZE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -138,7 +139,7 @@
                             <outlet property="delegate" destination="I6L-cw-txk" id="4Ue-In-dPd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recent Earthquakes" id="td9-po-4jh"/>
+                    <navigationItem key="navigationItem" title="Quakes NZ" id="td9-po-4jh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuF-I5-x2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +161,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2P-xU-EaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="415"/>
+            <point key="canvasLocation" x="1929" y="949"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="17k-bx-jbc">
@@ -181,4 +182,7 @@
             <point key="canvasLocation" x="313" y="415"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WY1-xP-eZE"/>
+    </inferredMetricsTieBreakers>
 </document>
