@@ -19,9 +19,9 @@ class EarthquakeTableViewController: UITableViewController {
         loadSampleEarthquakes()
     }
     
-    let Wellington = CLLocation(latitude: 41.3, longitude: 174.8)
-    let Auckland = CLLocation(latitude: 36.8, longitude: 174.7)
-    let Christchurch = CLLocation(latitude: 43.5, longitude: 172.6)
+    let Wellington = CLLocation(latitude: -41.3, longitude: 174.8)
+    let Auckland = CLLocation(latitude: -36.8, longitude: 174.7)
+    let Christchurch = CLLocation(latitude: -43.5, longitude: 172.6)
     
     func loadSampleEarthquakes() {
         let earthquake1 = Earthquake(magnitude: 3.206508, location: Wellington, timestamp: "15 minutes ago", depth: 10, intensity: "weak")
